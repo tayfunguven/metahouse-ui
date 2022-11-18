@@ -22,14 +22,14 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+//import Index from "./pages/index/Index";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/">
-            <Route index element={<Dashboard/>}/>
+          <Route path="/" element={<Dashboard/>}>
             <Route path="/login" element={<Login/>}/>
             <Route path="/users">
               <Route index element={<Users/>}/>
