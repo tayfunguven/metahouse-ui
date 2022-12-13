@@ -1,16 +1,15 @@
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Chart from '../../components/chart/Chart';
-import './single-user.scss';
+import './single.scss';
 import List from '../../components/list/List';
 
-const SingleUser = () => {
+const Single = () => {
     return(
         <div className='single'>
             <Sidebar/>
             <div className="singleContainer">
                 <Navbar/>
-
                 <div className="top">
                     <div className="left">
                         <div className="editButton">Edit</div>
@@ -53,4 +52,4 @@ const SingleUser = () => {
     )
 }
 
-export default SingleUser
+export default Single

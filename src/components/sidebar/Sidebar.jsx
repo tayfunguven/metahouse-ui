@@ -32,17 +32,30 @@ const Sidebar = () => {
                 <Link to="/users" style={{textDecoration: "none"}}>
                     <li><GroupAddIcon className='icon'/><span>Platform Users</span></li>
                 </Link>
-                <li><AssignmentIndIcon className='icon'/><span>Shifts</span></li>
-                <li><SummarizeIcon className='icon'/><span>Reports</span></li>
-                <li><QueryStatsIcon className='icon'/><span>Stats</span></li>
-                
+                <Link to="/shifts" style={{textDecoration: "none"}}>
+                    <li><AssignmentIndIcon className='icon'/><span>Shifts</span></li>
+                </Link>
+                <Link to="/reports" style={{textDecoration: "none"}}>
+                    <li><SummarizeIcon className='icon'/><span>Reports</span></li>
+                </Link>
+                <Link to="/stats" style={{textDecoration: "none"}}>
+                    <li><QueryStatsIcon className='icon'/><span>Stats</span></li>
+                </Link>
+
+
                 <p className="title">Application Content</p>
                 <Link to="/cafe-menu" style={{textDecoration: "none"}}>
                     <li><MenuBookIcon className='icon'/><span>Cafe Menu</span></li>
                 </Link>
-                <li><SchoolIcon className='icon'/><span>Trainings</span></li>
-                <li><NotificationAddIcon className='icon'/><span>Push Notifications</span></li>
-                <li><ManageAccountsIcon className='icon'/><span>Users</span></li>
+                <Link to="/trainings" style={{textDecoration: "none"}}>
+                    <li><SchoolIcon className='icon'/><span>Trainings</span></li>
+                </Link>
+                <Link to="/notifications" style={{textDecoration: "none"}}>
+                    <li><NotificationAddIcon className='icon'/><span>Push Notifications</span></li>
+                </Link>
+                <Link to="/appusers" style={{textDecoration: "none"}}>
+                    <li><ManageAccountsIcon className='icon'/><span>Users</span></li>
+                </Link>
             </ul>
         </div>
         <div className="bottom">

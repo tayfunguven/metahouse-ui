@@ -1,0 +1,40 @@
+.shifts {
+    display: flex;
+    width: 100%;
+
+    .shiftsContainer {
+        flex: 6;
+
+        .content {
+            -webkit-box-shadow: -3px 3px 7px 0px rgba(166, 142, 253, 0.75); 
+            box-shadow: -3px 3px 7px 0px rgba(185, 169, 241, 0.75);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .top {
+                width: 100%;
+                font-size: 18px;
+                color: gray;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+        
+                .link {
+                    text-decoration: none;
+                    color: #7451f8;
+                    font-size: 16px;
+                    font-weight: 400;
+                    border: 1px solid #7451f8;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+
+
+        }
+    }
+}
