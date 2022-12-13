@@ -1,27 +1,18 @@
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from './pages/login/Login';
-
-import CafeMenu from './pages/cafe_menu/CafeMenu';
-import MenuItems from './pages/menu_items/MenuItems';
-import MenuItem from './pages/menu-item/MenuItem';
-import NewMenuItem from './pages/new_menu_item/NewMenuItem';
-
+import MenuItems from './pages/menu-items/MenuItems';
 import Trainings from './pages/trainings/Trainings';
-import TrainingContents from './pages/training_contents/TrainingContents';
-import TrainingContent from './pages/training_content/TrainingContent';
-import NewTrainingContent from './pages/new_traning_content/NewTrainingContent';
-
 import Users from './pages/users/Users';
-import UserList from './pages/user_list/UserList';
-import User from './pages/user/User';
-import NewUser from './pages/new_user/NewUser';
-import UserReports from './pages/user_reports/UserReports';
+import New from './pages/new/New';
+import SingleUser from './pages/single-user/SingleUser';
+
 
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
+import { userInputs, contentInputs, menuInputs } from "./formsource";
 //import Index from "./pages/index/Index";
 
 function App() {
@@ -29,32 +20,25 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Dashboard/>}>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/users">
+          <Route path="/">
+            <Route index element={<Dashboard/>}/>
+            
+            <Route path="login" element={<Login/>}/>
+
+            <Route path="users">
               <Route index element={<Users/>}/>
-              <Route path="user-list">
-                <Route index element={<UserList/>}/>
-                <Route path=":userId" element={<User/>}/>
-                <Route path="new-user" element={<NewUser/>}/>
-              </Route>
-              <Route path="user-reports" element={<UserReports/>}/>
+              <Route path=":userId" element={<SingleUser/>}/>
+              <Route path="new" element={<New inputs={userInputs} title="Add A New User"/>}/>
             </Route>
+
             <Route path="/cafe-menu">
-              <Route index element={<CafeMenu/>}/>
-              <Route path="menu-items">
-                <Route index element={<MenuItems/>}/>
-                <Route path=":menuItemId" element={<MenuItem/>}/>
-                <Route path="new-menu-item" element={<NewMenuItem/>}/>
-              </Route>
+              <Route index element={<MenuItems/>}/>
+              <Route path="new" element={<New inputs={menuInputs} title="Add Items To The Menu"/>}/>
             </Route>
+
             <Route path="/trainings">
               <Route index element={<Trainings/>}/>
-              <Route path="training-contents">
-                <Route index element={<TrainingContents/>}/>
-                <Route path=":trainingContentId" element={<TrainingContent/>}/>
-                <Route path="new-training-content" element={<NewTrainingContent/>}/>
-              </Route>
+              <Route path="new" element={<New inputs={contentInputs} title="Add Items To The Training Content"/>}/>
             </Route>
           </Route>
         </Routes>

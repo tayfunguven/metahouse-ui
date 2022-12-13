@@ -2,7 +2,7 @@
     flex: 1;
     border-right: 0.5px solid rgb(224, 224, 224);
     min-height: 100vh;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(253, 253, 253);
 
     hr {
         height: 0;
@@ -14,13 +14,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: whitesmoke;
+        background-color: rgb(252, 252, 252);
         padding-top: 20px;
 
         .logo {
             font-size: 20px;
             font-weight: bolder;
-            color: #7451f8;
+            color: #e0ddee;
         }
         
         img {

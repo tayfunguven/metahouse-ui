@@ -12,24 +12,34 @@ import SummarizeIcon from '@mui/icons-material/Summarize';
 import PublicIcon from '@mui/icons-material/Public';
 import logo from '../../assets/icons/logo-admin-lt.png';
 
+import { Link } from 'react-router-dom';
+
 const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
-            <span className="logo"><img src={logo} alt='logo'></img></span>
+            <Link to="/"> 
+                <span className="logo"><img src={logo} alt='logo'></img></span> 
+            </Link>
         </div>
         <hr />
         <div className="center">
             <ul>
                 <p className="title">Main</p>
-                <li><DashboardIcon className='icon'/><span>Dashboard</span></li>
-                <li><GroupAddIcon className='icon'/><span>Platform Users</span></li>
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <li><DashboardIcon className='icon'/><span>Dashboard</span></li>
+                </Link>
+                <Link to="/users" style={{textDecoration: "none"}}>
+                    <li><GroupAddIcon className='icon'/><span>Platform Users</span></li>
+                </Link>
                 <li><AssignmentIndIcon className='icon'/><span>Shifts</span></li>
                 <li><SummarizeIcon className='icon'/><span>Reports</span></li>
                 <li><QueryStatsIcon className='icon'/><span>Stats</span></li>
                 
                 <p className="title">Application Content</p>
-                <li><MenuBookIcon className='icon'/><span>Cafe Menu</span></li>
+                <Link to="/cafe-menu" style={{textDecoration: "none"}}>
+                    <li><MenuBookIcon className='icon'/><span>Cafe Menu</span></li>
+                </Link>
                 <li><SchoolIcon className='icon'/><span>Trainings</span></li>
                 <li><NotificationAddIcon className='icon'/><span>Push Notifications</span></li>
                 <li><ManageAccountsIcon className='icon'/><span>Users</span></li>
@@ -44,11 +54,11 @@ const Sidebar = () => {
                         <option value="TR"><span>TR</span></option>
                     </select>
                 </div>   
-            <p className="title">Theme Options</p>
+            {/* <p className="title">Theme Options</p>
             <div className="colorGroup">
                 <div className="colorOption"></div>
                 <div className="colorOption"></div>
-            </div>
+            </div> */}
         </div>
     </div>
   )

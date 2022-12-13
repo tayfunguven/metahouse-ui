@@ -3,6 +3,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 var firstName = 'Tayfun';
+
+
+
+
 const Navbar = () => {
   return (
     <div className='navbar'>
