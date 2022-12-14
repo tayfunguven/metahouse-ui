@@ -5,7 +5,6 @@ import './new.scss'
 import { useState } from 'react'
 
 const New = ({inputs, title}) => {
-
     const [file, setFile] = useState("");
     // console.log(file)
     return (
@@ -26,14 +25,12 @@ const New = ({inputs, title}) => {
                                 <label htmlFor='file'>Upload image: <DriveFolderUploadOutlined className='icon-upload'/></label>
                                 <input type="file" id='file' onChange={e=>setFile(e.target.files[0])} style={{display: "none"}}/>
                             </div>
-
                             {inputs.map((input) => (
                                 <div className="formInput" key={input.id}>
                                     <label>{input.label}</label>
                                     <input type={input.type} placeholder={input.placeholder}/>
                                 </div>
-                            ))}
-                            
+                            ))}   
                             <button className="create">Save</button>
                         </form>
                     </div>
@@ -41,7 +38,6 @@ const New = ({inputs, title}) => {
             </div>
         </div>
     )
-
 }
 
 export default New

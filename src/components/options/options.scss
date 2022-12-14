@@ -1,0 +1,40 @@
+.opt {
+    display: flex;
+    flex: 1;
+    padding: 25px;
+    justify-content: space-between;
+
+    -webkit-box-shadow: -3px 3px 7px 0px rgba(166, 142, 253, 0.75); 
+    box-shadow: -3px 3px 7px 0px rgba(185, 169, 241, 0.75);
+    border-radius: 10px;
+
+    height: 60px;
+
+    .left, .right {
+        display: flex;
+        justify-content:space-between;
+        flex-direction: column;
+    
+        .title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #957af5;
+        }
+
+        .link {
+            width: max-content ;
+            font-size: 15px;
+            border-bottom: 1px solid rgb(204, 204, 204);
+            color: rgb(136, 136, 136);
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 50px;
+            padding: 5px;
+            border-radius: 5px;
+            align-self: flex-end;
+            cursor: pointer;
+        }
+    }
+}

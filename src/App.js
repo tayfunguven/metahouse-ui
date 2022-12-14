@@ -18,6 +18,7 @@ import {
 import { userInputs, contentInputs, menuInputs } from "./formsource";
 import Notifications from "./pages/notifications/Notifications";
 import AppUsers from "./pages/appusers/AppUsers";
+import StatsDetails from "./pages/statsdetails/StatsDetails";
 //import Index from "./pages/index/Index";
 
 function App() {
@@ -47,10 +48,10 @@ function App() {
             </Route>
             <Route path="/stats">
               <Route index element={<Stats/>}/>
+              <Route path="details" element={<StatsDetails/>}/>
             </Route>
 
             {/* APP CONTENT */}
-            
             <Route path="/cafe-menu">
               <Route index element={<Menu/>}/>
               <Route path=":itemId" element={<Single/>}/>

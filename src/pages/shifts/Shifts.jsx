@@ -17,9 +17,7 @@ const Shifts = () => {
                     </div>
                     <div className="bottom">
                         <List/>
-                    </div>
-                    
-                    
+                    </div>    
                 </div>
             </div>
         </div>

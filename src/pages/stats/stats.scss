@@ -1,8 +1,13 @@
 .stats {
     display: flex;
-    width: 100%;
-
+    
     .statsContainer {
         flex: 6;
+        
+        .options {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
     }
 }

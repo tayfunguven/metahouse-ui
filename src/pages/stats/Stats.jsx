@@ -1,5 +1,6 @@
-import Navbar from '../../components/navbar/Navbar'
-import Sidebar from '../../components/sidebar/Sidebar'
+import Navbar from '../../components/navbar/Navbar';
+import Options from '../../components/options/Options';
+import Sidebar from '../../components/sidebar/Sidebar';
 import './stats.scss'
 
 const Stats = () => {
@@ -8,7 +9,10 @@ const Stats = () => {
             <Sidebar/>
             <div className="statsContainer">
                 <Navbar/>
-                STATISTICS
+                <div className="options">
+                    <Options type='user'/>
+                    <Options type='cafe'/>
+                </div>
             </div>
         </div>
     )
